@@ -1,34 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt -br">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="CSS Hotel-1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Belo Horizonte</title>
+    
 </head>
+<style>
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
 <body>
-    <fieldset style="background-color: rgb(216, 84, 84)" >
-    <center><h1 style="color: rgb(26, 28, 189)">Hotel Belo Horizonte</h1></center>
+     
+    <fieldset style="background-color: rgb(10, 75, 145)" >
+    <h1>Hotel Belo Horizonte</h1>
     </fieldset>
+    <img src="tudo-o-que-voce-precisa-saber-para-viajar-a-belo-horizonte.jpeg" width="1405" height="300"margin-left: 20px;>
     <br>
-    <center><h3 style="color: rgb(182, 19, 19)">Se Inscreva na Nossa Lista de Emails Para Receber Ofertas</h3></center>
-    <center>
-        <form method="get" action="envio_dados.php">
-            <input type="text" name="nome" placeholder="Digite seu Nome aqui">
-            <input type="e-mail" name="email" placeholder="Digite seu e-mail">
-            <input type="submit" name="enviar" value="Enviar"> 
-        </form></center>
+    <h3 style="color: rgb(255, 0, 0)">Se Inscreva na Nossa Lista de Emails Para Receber Ofertas</h3>
+         
+        <form name='formulario' action='#' onsubmit='valida()'>
+            <label>Nome</label>
+            <input type='text' name='busca' id="busca">
+            <label>Email</label>
+            <input type='text' name='contato' id="contato">
+            <input type="submit">
+        </form>
+
+        <script>
+            function valida(){
+                if (document.getElementById('contato').value==''){
+                    alert('Prencha o campo');
+                    document.getElementById('contato').focus();
+                    return false;
+                }
+                if (document.getElementById('busca').value==''){
+                    alert('Prencha o campo');
+                    document.getElementById('busca').focus();
+                    return false;
+                }
+               
+            return true;    
+            }
+        </script>
+
         <br>
-        <center><h2>Fotos do Hotel Belo Horizonte</h2></center>
-        &nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="hotel.jpg" width="300" height="250">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="academia.jpg" width="300" height="250">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="quarto.jpg" width="300" height="250">
-        <br><br><br><br>
-        &nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="banheiro.jpg" width="300" height="250">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="hidro.jpg" width="300" height="250">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="entrada.jpg" width="300" height="250">
+        <h2>Fotos do Hotel Belo Horizonte</h2>
+       <ul>
+            <li>
+                <img src="hotel.jpg" width="300" height="250">
+                <center><h4>Hotel Belo Hozizonte</h4></center>
+               
+            </li>
+            <li>
+                <img src="academia.jpg" width="300" height="250">
+                <center><h4>Academia</h4></center>
+            </li>
+            <li>
+                <img src="quarto.jpg" width="300" height="250">
+                <center><h4>Quarto Casal</h4></center>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <img src="banheiro.jpg" width="300" height="250">
+                <center><h4>Suite</h4></center>
+            </li>
+            <li>
+                <img src="hidro.jpg" width="300" height="250">
+                <center><h4>Piscina Interna </h4></center>
+            </li>
+            <li>
+                <img src="entrada.jpg" width="300" height="250">
+                <center><h4>Hall de Entrada</h4></center>
+            </li>
+        </ul>
         <br>
         <br>
-       <!--Rodapé-->
-        <fieldset style="background-color: rgb(216, 84, 84)" >     
-            <table width="100%" style="margin: auto 0;">
+        <!--Rodapé-->
+        <fieldset style="background-color: rgb(10, 75, 145)" >     
+            <table width="100%" style="margin: auto 0">
                             <tr>
                                 <td>Endereço</td>
                                 <td>Serviços</td>
@@ -47,11 +104,9 @@
                             <tr>
                                 <td>Belo Horizonte</td>
                                 <td><a>Serviços de Quarto</a></td>
-                                <td><a>Whatsapp</a></td>
+                                <td><a href="https://www.whatsapp.com/?lang=pt_br" target="_blank">Whatsapp</a></td>
                             </tr>
             </table>
-        </fieldset> 
-        
-       
+        </fieldset>      
 </body>
 </html>
